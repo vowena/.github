@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://vowena.xyz">
-    <img src="./profile/banner.svg" alt="Vowena, trustless recurring payments built on Stellar" width="100%" />
+    <img src="./banner.svg" alt="Vowena, trustless recurring payments built on Stellar" width="100%" />
   </a>
 </div>
 
@@ -44,13 +44,13 @@
 </table>
 
 <div align="center">
-  <img src="./profile/divider.svg" alt="" width="100%" />
+  <img src="./divider.svg" alt="" width="100%" />
 </div>
 
 ## How it works
 
 <div align="center">
-  <img src="./profile/flow.svg" alt="Vowena subscription lifecycle: plan, subscribe, allowance, charge, settle" width="100%" />
+  <img src="./flow.svg" alt="Vowena subscription lifecycle: plan, subscribe, allowance, charge, settle" width="100%" />
 </div>
 
 <table width="100%">
@@ -78,17 +78,17 @@
 </table>
 
 <div align="center">
-  <img src="./profile/divider.svg" alt="" width="100%" />
+  <img src="./divider.svg" alt="" width="100%" />
 </div>
 
 ## The stack
 
 <div align="center">
-  <img src="./profile/stack.svg" alt="Vowena architecture stack: applications, protocol, foundation" width="100%" />
+  <img src="./stack.svg" alt="Vowena architecture stack: applications, protocol, foundation" width="100%" />
 </div>
 
 <div align="center">
-  <img src="./profile/divider.svg" alt="" width="100%" />
+  <img src="./divider.svg" alt="" width="100%" />
 </div>
 
 ## Repositories
@@ -96,7 +96,7 @@
 <table width="100%">
   <tr>
     <td width="60" valign="top" align="center">
-      <img src="./profile/icons/protocol.svg" width="56" height="56" alt="" />
+      <img src="./icons/protocol.svg" width="56" height="56" alt="" />
     </td>
     <td valign="top">
       <h3 style="margin:0"><a href="https://github.com/vowena/protocol">vowena/protocol</a></h3>
@@ -106,7 +106,7 @@
   </tr>
   <tr>
     <td valign="top" align="center">
-      <img src="./profile/icons/sdk.svg" width="56" height="56" alt="" />
+      <img src="./icons/sdk.svg" width="56" height="56" alt="" />
     </td>
     <td valign="top">
       <h3 style="margin:0"><a href="https://github.com/vowena/sdk">vowena/sdk</a></h3>
@@ -116,7 +116,7 @@
   </tr>
   <tr>
     <td valign="top" align="center">
-      <img src="./profile/icons/dashboard.svg" width="56" height="56" alt="" />
+      <img src="./icons/dashboard.svg" width="56" height="56" alt="" />
     </td>
     <td valign="top">
       <h3 style="margin:0"><a href="https://github.com/vowena/dashboard">vowena/dashboard</a></h3>
@@ -126,7 +126,7 @@
   </tr>
   <tr>
     <td valign="top" align="center">
-      <img src="./profile/icons/site.svg" width="56" height="56" alt="" />
+      <img src="./icons/site.svg" width="56" height="56" alt="" />
     </td>
     <td valign="top">
       <h3 style="margin:0"><a href="https://github.com/vowena/site">vowena/site</a></h3>
@@ -136,7 +136,7 @@
   </tr>
   <tr>
     <td valign="top" align="center">
-      <img src="./profile/icons/docs.svg" width="56" height="56" alt="" />
+      <img src="./icons/docs.svg" width="56" height="56" alt="" />
     </td>
     <td valign="top">
       <h3 style="margin:0"><a href="https://github.com/vowena/docs">vowena/docs</a></h3>
@@ -147,7 +147,7 @@
 </table>
 
 <div align="center">
-  <img src="./profile/divider.svg" alt="" width="100%" />
+  <img src="./divider.svg" alt="" width="100%" />
 </div>
 
 ## Network
@@ -168,7 +168,7 @@
 </table>
 
 <div align="center">
-  <img src="./profile/divider.svg" alt="" width="100%" />
+  <img src="./divider.svg" alt="" width="100%" />
 </div>
 
 ## Community
@@ -193,7 +193,7 @@
 <br />
 
 <div align="center">
-  <img src="./profile/footer.svg" alt="vowena" width="320" />
+  <img src="./footer.svg" alt="vowena" width="320" />
 </div>
 
 <p align="center">
