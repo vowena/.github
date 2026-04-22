@@ -1,0 +1,116 @@
+<svg width="1280" height="420" viewBox="0 0 1280 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Vowena architecture stack">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0F0F16"/>
+      <stop offset="1" stop-color="#13102C"/>
+    </linearGradient>
+    <linearGradient id="appsCard" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1A1530"/>
+      <stop offset="1" stop-color="#13102C"/>
+    </linearGradient>
+    <linearGradient id="protoCard" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3F24C7" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#1A0F52" stop-opacity="0.6"/>
+    </linearGradient>
+    <linearGradient id="chainCard" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#14141C"/>
+      <stop offset="1" stop-color="#0F0F16"/>
+    </linearGradient>
+    <pattern id="dots" x="0" y="0" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="0.9" fill="#B5A8FF" fill-opacity="0.06"/>
+    </pattern>
+    <filter id="violetGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="420" fill="url(#bg)"/>
+  <rect width="1280" height="420" fill="url(#dots)"/>
+
+  <g font-family="system-ui, -apple-system, 'Segoe UI', Inter, sans-serif" text-anchor="middle">
+    <text x="640" y="42" font-size="11" font-weight="700" letter-spacing="3.2" fill="#B5A8FF">THE STACK</text>
+    <text x="640" y="74" font-size="22" font-weight="600" fill="#F4F4F5" letter-spacing="-0.5">Built on what works. Composable from day one.</text>
+  </g>
+
+  <!-- Layer 1: Apps row (top) -->
+  <g transform="translate(160, 110)" font-family="system-ui, -apple-system, sans-serif">
+    <text x="0" y="-12" font-size="10" font-weight="700" letter-spacing="2.2" fill="#807C90">APPLICATIONS</text>
+    <!-- Dashboard card -->
+    <g transform="translate(0, 0)">
+      <rect width="280" height="64" rx="10" fill="url(#appsCard)" stroke="#23223A" stroke-width="1"/>
+      <rect x="14" y="20" width="24" height="24" rx="5" fill="#6B4EFF" fill-opacity="0.18"/>
+      <path d="M22 36l4-5 4 3 5-7 5 4" stroke="#B5A8FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none" transform="translate(14,20)"/>
+      <text x="56" y="28" font-size="13" font-weight="600" fill="#F4F4F5">Dashboard</text>
+      <text x="56" y="46" font-size="11" fill="#807C90">Merchants &amp; subscribers UI</text>
+    </g>
+    <!-- SDK card -->
+    <g transform="translate(320, 0)">
+      <rect width="280" height="64" rx="10" fill="url(#appsCard)" stroke="#23223A" stroke-width="1"/>
+      <rect x="14" y="20" width="24" height="24" rx="5" fill="#6B4EFF" fill-opacity="0.18"/>
+      <path d="M22 26l-3 3 3 3M32 26l3 3-3 3M28 25l-2 8" stroke="#B5A8FF" stroke-width="1.4" stroke-linecap="round" fill="none" transform="translate(14,20)"/>
+      <text x="56" y="28" font-size="13" font-weight="600" fill="#F4F4F5">@vowena/sdk</text>
+      <text x="56" y="46" font-size="11" fill="#807C90">TypeScript builders + reads</text>
+    </g>
+    <!-- Custom integrations card -->
+    <g transform="translate(640, 0)">
+      <rect width="280" height="64" rx="10" fill="url(#appsCard)" stroke="#23223A" stroke-width="1" stroke-dasharray="4 4"/>
+      <rect x="14" y="20" width="24" height="24" rx="5" fill="#6B4EFF" fill-opacity="0.12"/>
+      <path d="M28 24v8M24 28h8" stroke="#9B85FF" stroke-width="1.4" stroke-linecap="round" transform="translate(14,20)"/>
+      <text x="56" y="28" font-size="13" font-weight="600" fill="#F4F4F5">Your app</text>
+      <text x="56" y="46" font-size="11" fill="#807C90">Build with the SDK or call directly</text>
+    </g>
+  </g>
+
+  <!-- Connectors top -->
+  <g stroke="#3F24C7" stroke-width="1" stroke-opacity="0.5" stroke-dasharray="2 4">
+    <line x1="300" y1="178" x2="300" y2="220"/>
+    <line x1="620" y1="178" x2="620" y2="220"/>
+    <line x1="940" y1="178" x2="940" y2="220"/>
+  </g>
+
+  <!-- Layer 2: Vowena Protocol (the keystone) -->
+  <g transform="translate(160, 220)" filter="url(#violetGlow)">
+    <rect width="960" height="80" rx="12" fill="url(#protoCard)" stroke="#6B4EFF" stroke-width="1.5"/>
+  </g>
+  <g transform="translate(160, 220)" font-family="system-ui, -apple-system, sans-serif">
+    <text x="-1" y="-12" font-size="10" font-weight="700" letter-spacing="2.2" fill="#B5A8FF">PROTOCOL</text>
+    <g transform="translate(28, 22)">
+      <path d="M22 6C22 6 12 8 9.5 20C7 32 17 34 17 34" stroke="#B5A8FF" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+      <path d="M17 34C17 34 27 32 29.5 20C32 8 22 6 22 6" stroke="#B5A8FF" stroke-width="2.2" stroke-linecap="round" fill="none" opacity="0.45"/>
+      <circle cx="19.5" cy="20" r="2" fill="#B5A8FF"/>
+    </g>
+    <text x="76" y="34" font-size="20" font-weight="600" fill="#F4F4F5" letter-spacing="-0.5">vowena <tspan fill="#B5A8FF">contract</tspan></text>
+    <text x="76" y="58" font-size="12" fill="#C5C0D8">Plans, projects, subscriptions, charge, refund, migration, grace, expiry. 20 functions. 1 source of truth.</text>
+    <g transform="translate(820, 32)" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="10" fill="#807C90">
+      <text>CCND...L72T</text>
+      <circle cx="-12" cy="-3" r="3" fill="#00DC82">
+        <animate attributeName="opacity" values="1;0.3;1" dur="2.4s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+  </g>
+
+  <!-- Connector mid to bottom -->
+  <line x1="640" y1="300" x2="640" y2="332" stroke="#3F24C7" stroke-width="1" stroke-opacity="0.5" stroke-dasharray="2 4"/>
+
+  <!-- Layer 3: Soroban + Stellar -->
+  <g transform="translate(160, 332)" font-family="system-ui, -apple-system, sans-serif">
+    <text x="-1" y="-12" font-size="10" font-weight="700" letter-spacing="2.2" fill="#807C90">FOUNDATION</text>
+    <rect width="960" height="64" rx="10" fill="url(#chainCard)" stroke="#23223A" stroke-width="1"/>
+    <g transform="translate(28, 22)">
+      <circle cx="12" cy="12" r="11" fill="none" stroke="#6E6894" stroke-width="1.5"/>
+      <path d="M3 9l18 6M3 15l18-6" stroke="#6E6894" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+    <text x="76" y="34" font-size="14" font-weight="600" fill="#F4F4F5">Stellar</text>
+    <text x="76" y="50" font-size="11" fill="#807C90">5-second finality, ~$0.00001 per tx, native USDC, MoneyGram on/off ramps</text>
+    <g transform="translate(540, 22)">
+      <rect x="0" y="0" width="24" height="24" rx="5" stroke="#6E6894" stroke-width="1.5" fill="none"/>
+      <path d="M6 8h12M6 12h8M6 16h10" stroke="#6E6894" stroke-width="1.4" stroke-linecap="round" opacity="0.7"/>
+    </g>
+    <text x="588" y="34" font-size="14" font-weight="600" fill="#F4F4F5">Soroban</text>
+    <text x="588" y="50" font-size="11" fill="#807C90">SEP-41 token allowances, parallelizable contract storage, deterministic auth</text>
+  </g>
+</svg>

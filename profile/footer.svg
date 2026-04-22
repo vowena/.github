@@ -1,0 +1,16 @@
+<svg width="320" height="80" viewBox="0 0 320 80" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="vowena">
+  <defs>
+    <linearGradient id="rule" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#6B4EFF" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#6B4EFF" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#6B4EFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <line x1="40" y1="14" x2="280" y2="14" stroke="url(#rule)" stroke-width="1"/>
+  <g transform="translate(108, 28) scale(0.55)">
+    <path d="M44 18C44 18 28 22 24 40C20 58 36 62 36 62" stroke="#6B4EFF" stroke-width="5" stroke-linecap="round" fill="none"/>
+    <path d="M36 62C36 62 52 58 56 40C60 22 44 18 44 18" stroke="#6B4EFF" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.45"/>
+    <circle cx="40" cy="40" r="3.5" fill="#6B4EFF"/>
+  </g>
+  <text x="160" y="58" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" letter-spacing="-0.6" fill="#807C90">vowena</text>
+</svg>

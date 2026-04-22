@@ -33,7 +33,7 @@
     <td width="33%" valign="top">
       <h4>Launch the dashboard</h4>
       <p><a href="https://dashboard.vowena.xyz">dashboard.vowena.xyz</a></p>
-      <sub>Connect Freighter, create a plan, manage subscriptions.</sub>
+      <sub>Connect any Stellar wallet, create a plan, manage subscriptions.</sub>
     </td>
     <td width="33%" valign="top">
       <h4>Read the docs</h4>
@@ -43,83 +43,160 @@
   </tr>
 </table>
 
-<br />
+<div align="center">
+  <img src="./profile/divider.svg" alt="" width="100%" />
+</div>
+
+## How it works
+
+<div align="center">
+  <img src="./profile/flow.svg" alt="Vowena subscription lifecycle: plan, subscribe, allowance, charge, settle" width="100%" />
+</div>
+
+<table width="100%">
+  <tr>
+    <td valign="top">
+      <strong>1. Plan.</strong> A merchant defines the token, amount, period, trial, max periods, grace window, and price band. The plan lives on chain and is immutable.
+    </td>
+    <td valign="top">
+      <strong>2. Subscribe.</strong> A subscriber authorizes the Vowena contract to spend up to a fixed amount of their token, with an expiration ledger. They sign once, in their wallet.
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <strong>3. Allowance.</strong> The token's SAC stores the pre-approval. The Vowena contract holds permission to pull, never the funds themselves.
+    </td>
+    <td valign="top">
+      <strong>4. Charge.</strong> Anyone can call <code>charge</code> for a due subscription. The contract validates timing and allowance, then pulls the next period from subscriber to merchant.
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" valign="top">
+      <strong>5. Settle.</strong> Every billing event, refund, pause, and cancellation is emitted as a Soroban event. The contract is the source of truth; the dashboard and SDK are convenience layers. Cancellation is one call, public, and works without any frontend.
+    </td>
+  </tr>
+</table>
+
+<div align="center">
+  <img src="./profile/divider.svg" alt="" width="100%" />
+</div>
+
+## The stack
+
+<div align="center">
+  <img src="./profile/stack.svg" alt="Vowena architecture stack: applications, protocol, foundation" width="100%" />
+</div>
+
+<div align="center">
+  <img src="./profile/divider.svg" alt="" width="100%" />
+</div>
 
 ## Repositories
 
 <table width="100%">
   <tr>
-    <td width="50%" valign="top">
-      <h3><a href="https://github.com/vowena/protocol">vowena/protocol</a></h3>
+    <td width="60" valign="top" align="center">
+      <img src="./profile/icons/protocol.svg" width="56" height="56" alt="" />
+    </td>
+    <td valign="top">
+      <h3 style="margin:0"><a href="https://github.com/vowena/protocol">vowena/protocol</a></h3>
       <p>Soroban smart contract written in Rust. The billing engine. Plans, subscriptions, charge, refund, migrations, grace periods, auto-expiry.</p>
-      <sub>Rust  ·  Soroban  ·  Stellar testnet</sub>
+      <sub>Rust  ·  Soroban  ·  Stellar testnet  ·  Apache 2.0</sub>
     </td>
-    <td width="50%" valign="top">
-      <h3><a href="https://github.com/vowena/sdk">vowena/sdk</a></h3>
+  </tr>
+  <tr>
+    <td valign="top" align="center">
+      <img src="./profile/icons/sdk.svg" width="56" height="56" alt="" />
+    </td>
+    <td valign="top">
+      <h3 style="margin:0"><a href="https://github.com/vowena/sdk">vowena/sdk</a></h3>
       <p>TypeScript SDK published to npm as <code>@vowena/sdk</code>. Wraps every contract function with typed inputs, simulation, and event helpers.</p>
-      <sub>TypeScript  ·  @stellar/stellar-sdk  ·  works with Freighter, xBull, Albedo, WalletConnect</sub>
+      <sub>TypeScript strict  ·  ESM + CJS  ·  works with Freighter, Lobstr, xBull, Albedo</sub>
     </td>
   </tr>
   <tr>
-    <td width="50%" valign="top">
-      <h3><a href="https://github.com/vowena/dashboard">vowena/dashboard</a></h3>
-      <p>Next.js app for merchants and subscribers. Plan creation, billing analytics, the Universal Subscription Manager, and a built-in keeper.</p>
-      <sub>Next.js  ·  React  ·  <a href="https://dashboard.vowena.xyz">dashboard.vowena.xyz</a></sub>
+    <td valign="top" align="center">
+      <img src="./profile/icons/dashboard.svg" width="56" height="56" alt="" />
     </td>
-    <td width="50%" valign="top">
-      <h3><a href="https://github.com/vowena/site">vowena/site</a></h3>
-      <p>Marketing site at <a href="https://vowena.xyz">vowena.xyz</a>. Landing, pricing, blog, brand surface.</p>
-      <sub>Next.js  ·  static  ·  edge cached</sub>
+    <td valign="top">
+      <h3 style="margin:0"><a href="https://github.com/vowena/dashboard">vowena/dashboard</a></h3>
+      <p>Next.js app for merchants and subscribers. Plan creation, billing analytics, the universal subscription manager, and a managed keeper that runs as a Vercel cron.</p>
+      <sub>Next.js 16  ·  React 19  ·  <a href="https://dashboard.vowena.xyz">dashboard.vowena.xyz</a></sub>
     </td>
   </tr>
   <tr>
+    <td valign="top" align="center">
+      <img src="./profile/icons/site.svg" width="56" height="56" alt="" />
+    </td>
+    <td valign="top">
+      <h3 style="margin:0"><a href="https://github.com/vowena/site">vowena/site</a></h3>
+      <p>Marketing site at <a href="https://vowena.xyz">vowena.xyz</a>. Landing, pricing, MDX blog with syntax highlighting and dynamic OG images.</p>
+      <sub>Next.js 16  ·  Tailwind v4  ·  MDX</sub>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top" align="center">
+      <img src="./profile/icons/docs.svg" width="56" height="56" alt="" />
+    </td>
+    <td valign="top">
+      <h3 style="margin:0"><a href="https://github.com/vowena/docs">vowena/docs</a></h3>
+      <p>Developer documentation at <a href="https://docs.vowena.xyz">docs.vowena.xyz</a>. Concepts, contract reference, SDK guides, dashboard guides.</p>
+      <sub>Mintlify  ·  MDX  ·  CC BY 4.0</sub>
+    </td>
+  </tr>
+</table>
+
+<div align="center">
+  <img src="./profile/divider.svg" alt="" width="100%" />
+</div>
+
+## Network
+
+<table width="100%">
+  <tr>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/vowena/docs">vowena/docs</a></h3>
-      <p>Developer documentation at <a href="https://docs.vowena.xyz">docs.vowena.xyz</a>. Contract reference, SDK guides, integration patterns.</p>
-      <sub>Mintlify  ·  MDX</sub>
+      <h4>Stellar testnet  <sub><kbd>live</kbd></sub></h4>
+      <pre><code>CCNDNEGYFYKTVBM7T2BEF5YVSKKICE44JOVHT7SAN5YTKHHBFIIEL72T</code></pre>
+      <p><a href="https://stellar.expert/explorer/testnet/contract/CCNDNEGYFYKTVBM7T2BEF5YVSKKICE44JOVHT7SAN5YTKHHBFIIEL72T">View on Stellar Expert &rarr;</a></p>
     </td>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/vowena">More coming</a></h3>
-      <p>Keeper bot, indexer, framework adapters, and reference integrations are on the roadmap.</p>
-      <sub>open source by default</sub>
+      <h4>Stellar mainnet  <sub>coming soon</sub></h4>
+      <p>Mainnet deployment ships after pilot merchants on testnet validate the billing loop end to end.</p>
+      <p><sub>Want to be one of the first merchants? <a href="mailto:hello@vowena.xyz">hello@vowena.xyz</a></sub></p>
+    </td>
+  </tr>
+</table>
+
+<div align="center">
+  <img src="./profile/divider.svg" alt="" width="100%" />
+</div>
+
+## Community
+
+<table width="100%">
+  <tr>
+    <td valign="top">
+      <h4>Web</h4>
+      <p><a href="https://vowena.xyz">vowena.xyz</a><br/><a href="https://docs.vowena.xyz">docs.vowena.xyz</a><br/><a href="https://dashboard.vowena.xyz">dashboard.vowena.xyz</a></p>
+    </td>
+    <td valign="top">
+      <h4>Talk to us</h4>
+      <p><a href="https://x.com/vowena">@vowena on X</a><br/><a href="https://github.com/orgs/vowena/discussions">GitHub discussions</a><br/><a href="mailto:hello@vowena.xyz">hello@vowena.xyz</a></p>
+    </td>
+    <td valign="top">
+      <h4>Build with us</h4>
+      <p>Every repository accepts issues and PRs.<br/>Pick one and start with <code>good first issue</code>.</p>
     </td>
   </tr>
 </table>
 
 <br />
 
-## How Vowena works
-
-1. **Create a plan.** A merchant defines the token, amount, period, trial, max periods, grace window, and price band. The plan lives on chain and is immutable.
-2. **Subscribe with an allowance.** A subscriber authorizes the Vowena contract to spend up to a fixed amount of their token, with an expiration ledger. They sign once, in their wallet.
-3. **Charge permissionlessly.** Anyone can call `charge` for a due subscription. The contract validates timing and allowance, then transfers tokens from the subscriber to the merchant.
-4. **Settle on chain.** Every billing event, refund, pause, and cancellation is emitted as a Soroban event. The contract is the source of truth; the dashboard and SDK are convenience layers.
-
-The subscriber's funds are never custodied by Vowena. The contract holds a permission to pull, not the funds themselves. Cancellation is one call, public, and works without any frontend.
-
-<br />
-
-## Network
-
-Live today on **Stellar testnet** at contract `CCNDNEGYFYKTVBM7T2BEF5YVSKKICE44JOVHT7SAN5YTKHHBFIIEL72T`. Mainnet deployment ships after pilot merchants.
-
-<br />
-
-## Community
-
-- Web: [vowena.xyz](https://vowena.xyz)
-- Docs: [docs.vowena.xyz](https://docs.vowena.xyz)
-- Dashboard: [dashboard.vowena.xyz](https://dashboard.vowena.xyz)
-- X: [@vowena](https://x.com/vowena)
-- Discussions: [github.com/orgs/vowena/discussions](https://github.com/orgs/vowena/discussions)
-- Contact: [hello@vowena.xyz](mailto:hello@vowena.xyz)
-
-<br />
+<div align="center">
+  <img src="./profile/footer.svg" alt="vowena" width="320" />
+</div>
 
 <p align="center">
-  Built on <a href="https://stellar.org">Stellar</a>. Powered by <a href="https://stellar.org/soroban">Soroban</a>.
-</p>
-
-<p align="center">
+  Built on <a href="https://stellar.org">Stellar</a>. Powered by <a href="https://stellar.org/soroban">Soroban</a>.<br/>
   <sub>Apache-2.0 licensed. Read the source. Run the keeper. Own your billing.</sub>
 </p>
